@@ -1,0 +1,21 @@
+#: import menu menu
+
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: "images/galaxy_backgound.jpg"
+        Color:
+            rgba: 0, 0, 0, .7
+        Rectangle:
+            size: self.size
+    menu_widget: menu_widget
+    MenuLayout:
+        id: menu_widget
+    Label:
+        text: "SCORE: " + root.points
+        font_size: int(self.width/8)
+        size_hint: .2, .2
+        pos_hint: {"left": .1, "top": 1}

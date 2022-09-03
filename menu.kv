@@ -1,0 +1,20 @@
+
+<MenuLayout>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, .8
+        Rectangle:
+            size: self.size
+    Label:
+        text: root.parent.menu_title
+        font_size: int(self.width/10)
+        pos_hint: {"center_x": .5, "center_y": .7}
+
+    Button:
+        text: root.parent.button_title
+        pos_hint: {"center_x": .5, "center_y": .4}
+        size_hint: .2, .1
+        on_press: root.parent.start_game()
+        disabled: False
+        background_normal: ''
+        background_color: .5, .2, .9, 1
